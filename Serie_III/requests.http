@@ -1,0 +1,19 @@
+### Consultar todas las tareas
+GET http://127.0.0.1:8000/api/tareas/
+
+### Consultar una tarea
+GET http://127.0.0.1:8000/api/tareas/1/
+
+### Filtrar pendientes
+GET http://127.0.0.1:8000/api/tareas/?estado=pendiente
+
+### Filtrar completadas
+GET http://127.0.0.1:8000/api/tareas/?estado=completada
+
+### Marcar una tarea como completada
+PATCH http://127.0.0.1:8000/api/tareas/1/
+Content-Type: application/json
+
+{
+  "estado": "completada"
+}
